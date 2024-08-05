@@ -19,11 +19,34 @@ module.exports = () => {
     },
     plugins: [
       new InjectManifest({
-        swSRC: "src-sw.js", // CHECK IF CORRECT PATH
+        swSrc: "./src-sw.js", // CHECK IF CORRECT PATH
         swDest: "service-worker.js",
       }),
+      new HtmlWebpackPlugin({
+        template: "./index.html",
+        title: "Jate",
+      }),
+      new WebpackPwaManifest({
+        // fingerprints: false,
+        // inject: true,
+        name: "Jate",
+        short_name: "J",
+        description: "Text Editor",
+        orientation: "portrait",
+        display: "standalone",
+        background_color: "#808080",
+        theme_color: "#7eb4e2",
+        start_url: "/",
+        publicPath: "./",
+        icons: [
+          {
+            src: path.resolve("./src/images/logo.png"),
+            sizes: [96, 128, 256, 384, 512],
+            destination: path.join("images"),
+          },
+        ],
+      }),
     ],
-
     module: {
       rules: [
         {
