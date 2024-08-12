@@ -19,7 +19,7 @@ module.exports = () => {
       path: path.resolve(__dirname, "dist"),
     },
     plugins: [
-      MiniCssExtractPlugin(),
+      new MiniCssExtractPlugin(),
       new InjectManifest({
         swSrc: "./src-sw.js",
         swDest: "service-worker.js",

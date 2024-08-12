@@ -26,12 +26,12 @@
       "type": "image/png"
     }
   ],
-  "name": "Jate",
-  "short_name": "J",
+  "name": "Just Another Text Editor",
+  "short_name": "JATE",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "/",
-  "description": "Text Editor",
+  "description": "A basic text editor",
   "background_color": "#808080",
   "theme_color": "#7eb4e2"
 }
